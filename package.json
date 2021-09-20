@@ -24,7 +24,12 @@
     "docs:clean": "rm -rf docs && yarn docs",
     "docs:serve": "yarn docs:clean && hs docs -o",
     "coverage": "yarn coverage:serve",
-    "coverage:serve": "yarn test && hs coverage -o"
+    "coverage:serve": "yarn test && hs coverage -o",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "prepare": "npm run compile",
+    "pretest": "npm run compile",
+    "posttest": "npm run lint"
   },
   "repository": {
     "type": "git",
